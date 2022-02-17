@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        service: ["flask-app","flask-app-2" ]
+        service: ["flask_app","flask_app_2" ]
 
     steps:
     - uses: actions/checkout@v2
@@ -25,4 +25,4 @@ jobs:
         pip install pytest
         pip install requests
     - name: Test Flask App
-      run: pytest ./tests
+      run: pytest ./tests/test_${{ matrix.service }}
