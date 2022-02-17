@@ -14,8 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-#    - name: Build the Docker image
-#      run: docker build -f ./app/Dockerfile -t flask-app .
     - name: Build & Run Flask App
       run: docker-compose up -d --build flask-app
     - uses: actions/setup-python@v2
