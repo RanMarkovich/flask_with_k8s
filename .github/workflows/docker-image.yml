@@ -20,6 +20,8 @@ jobs:
       run: docker run --name flask-app -d -p 5000:5000 flask-app
     - uses: actions/setup-python@v2
     - name: Prepare Test Environment
-      run: pip install pytest
+      run: |
+        pip install pytest
+        pip install requests
     - name: Test Flask App
       run: pytest ./tests
