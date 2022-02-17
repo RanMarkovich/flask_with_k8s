@@ -25,4 +25,4 @@ jobs:
         pip install pytest
         pip install requests
     - name: Test Flask App
-      run: pytest ./tests/test_${{ matrix.service }}
+      run: pytest ./tests/test_${{ matrix.service }}.py
