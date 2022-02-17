@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build -f ./app/Dockerfile -t flask-app .
-    - name: Run the Docker image
-      run: docker run --name flask-app -d -p 5000:5000 flask-app
+#    - name: Build the Docker image
+#      run: docker build -f ./app/Dockerfile -t flask-app .
+    - name: Build & Run Flask App
+      run: docker-compose up -d --build flask-app
     - uses: actions/setup-python@v2
     - name: Prepare Test Environment
       run: |
