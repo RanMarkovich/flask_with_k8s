@@ -11,11 +11,14 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: ["flask-app","flask-app-2" ]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build & Run Flask App
-      run: docker-compose up -d --build flask-app
+    - name: Build Services
+      run: docker-compose up -d --build ${{ matrix.service }}
     - uses: actions/setup-python@v2
     - name: Prepare Test Environment
       run: |
