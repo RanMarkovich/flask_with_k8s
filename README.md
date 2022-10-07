@@ -12,7 +12,7 @@ Start local k8s:
 2. Launch dashboard: 'minikube dashboard'
 
 Load Image to minikube:
-1. Build image: 'docker-compose build <service_name>'
+1. Build image: 'docker-compose -f <path_to_compose_file> build <service_name>'
 2. Load image: 'minikube image load <image_name>' (get it from 'docker image ls')
 
 Create application and services:
