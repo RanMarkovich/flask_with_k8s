@@ -16,9 +16,9 @@ Load Image to minikube:
 2. Load image: 'minikube image load <image_name>' (get it from 'docker image ls')
 
 Create application and services:
-1. Type 'kubectl apply -f C:\Users\Ran\PycharmProjects\FlaskWithGithubActions\k8s\deployment.yml' (to spin up pod containing image)
-2. Type 'kubectl apply -f C:\Users\Ran\PycharmProjects\FlaskWithGithubActions\k8s\service.yml' (to enable communication with flask service)
-3. Type 'kubectl apply -f C:\Users\Ran\PycharmProjects\FlaskWithGithubActions\k8s\ingress.yml' (to enable localhost communication with flask service)
+1. Type 'kubectl apply -f <path_to_deployment_file>' (to spin up pod containing image)
+2. Type 'kubectl apply -f <path_to_service_file>' (to enable communication with flask service)
+3. Type 'kubectl apply -f <path_to_ingress_file>' (to enable localhost communication with flask service)
 Note: you should enable the ingress addon first before executing step 3 - to do that type: 'minikube addons enable ingress'
 4. Type 'kubectl get ing' to get ingress ip or go to k8s dashboard > services > ingress > under the Endpoint column
 - now you shuold get the response from the flask app
