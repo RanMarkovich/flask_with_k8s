@@ -19,9 +19,9 @@ Create application and services:
 1. Type 'kubectl apply -f <path_to_deployment_file>' (to spin up pod containing image)
 2. Type 'kubectl apply -f <path_to_service_file>' (to enable communication with flask service)
 3. Type 'kubectl apply -f <path_to_ingress_file>' (to enable localhost communication with flask service)
-Note: you should enable the ingress addon first before executing step 3 - to do that type: 'minikube addons enable ingress'
+- Note: you should enable the ingress addon first before executing step 3 - to do that type: 'minikube addons enable ingress'
 4. Type 'kubectl get ing' to get ingress ip or go to k8s dashboard > services > ingress > under the Endpoint column
-- now you shuold get the response from the flask app
+- Now you shuold get the response from the flask app
 
 Project Resources:
 1. Deploying a Flask Application on Kubernetes | Practical K8s Overview (https://www.youtube.com/watch?v=-g9r8BSlDFI)
