@@ -8,8 +8,8 @@ Prerequisites:
 2. Minikube installed
 
 Start local k8s:
-2. Run minikube: 'minikube start'
-3. Launch dashboard: 'minikube dashboard'
+1. Run minikube: 'minikube start'
+2. Launch dashboard: 'minikube dashboard'
 
 Load Image to minikube:
 1. Build image: 'docker-compose build <service_name>'
@@ -22,3 +22,6 @@ Create application and services:
 Note: you should enable the ingress addon first before executing step 3 - to do that type: 'minikube addons enable ingress'
 4. Type 'kubectl get ing' to get ingress ip or go to k8s dashboard > services > ingress > under the Endpoint column
 - now you shuold get the response from the flask app
+
+Project Resources:
+1. Deploying a Flask Application on Kubernetes | Practical K8s Overview (https://www.youtube.com/watch?v=-g9r8BSlDFI)
